@@ -1,6 +1,7 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
@@ -45,5 +46,16 @@ public class BMICalculatorTest {
         String category = browser.findElement(By.name("desc")).getAttribute("value");
         assertEquals(category, "Your category is Starvation", "Категория верная");
         browser.quit();
+    }
+
+    @Test
+    public void lesson6() {
+        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
+        options.addArguments("--start-maximized");
+        WebDriver browser = new ChromeDriver();
+        browser.get("https://tut.by")
+
     }
 }
