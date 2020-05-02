@@ -1,6 +1,7 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
@@ -76,10 +77,18 @@ public class BMICalculatorTest {
         //вернуться назад из iframe
         chrome.switchTo().defaultContent();
 //        chrome.switchTo().window(currentWindow);
+
+/*
         //работа с алертами  - они бывают трех типов (есть которые можно закрыть
+        Alert alert = chrome.switchTo().alert();
+        alert.getText(); // И уже ассертить полученный текст
+        alert.dismiss(); // закрыть алерт (close btn click)
+                //второй тип алертом - нажать ОК and for cancel use dismiss
+        alert.accept();
+        alert.sendKeys(""); //если надо в алерте отправить текст в поле
 
-        //chrome.switchTo().alert().
-
+ */
+        WebElement element = chrome.findElement(By.id("mce_0_ifr"));
         chrome.quit();
     }
 }
