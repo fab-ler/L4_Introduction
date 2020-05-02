@@ -20,5 +20,7 @@ public class InputTest {
 //        element.getText();
 //        element.getAttribute("value");
 //        element.getAttribute("class");
+
+        chrome.quit();
     }
 }
