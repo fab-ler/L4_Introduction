@@ -3,6 +3,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
+import utils.CapabilitiesGenerator;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -14,27 +15,27 @@ public class AddRemoveElements {
     @Test
     void FindElementsTestExample() {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
-        WebDriver chrome = new ChromeDriver();
-        chrome.get("http://the-internet.herokuapp.com/add_remove_elements/");
-        chrome.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        WebDriver driver = new ChromeDriver(CapabilitiesGenerator.getChromeOptions());
+        driver.get("http://the-internet.herokuapp.com/add_remove_elements/");
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-        List<WebElement> elements = chrome.findElements(By.xpath("//*[@onclick='deleteElement()']"));
+        List<WebElement> elements = driver.findElements(By.xpath("//*[@onclick='deleteElement()']"));
         //посчитаем кол-во элементов и проверим ассертом, что изначально кнопок нет:
         assertEquals(elements.size(), 0, "кнопка delete доступна, хотя ее быть не должно");
         //кликнем на кнопку add element чтобы появились кнопки delete
-        chrome.findElement(By.xpath("//*[@onclick='addElement()']")).click();
+        driver.findElement(By.xpath("//*[@onclick='addElement()']")).click();
         //перезапишем массиви еще раз поищем элементы
-        elements = chrome.findElements(By.xpath("//*[@onclick='deleteElement()']"));
+        elements = driver.findElements(By.xpath("//*[@onclick='deleteElement()']"));
         assertEquals(elements.size(), 1, "должна быть доступна только одна кнопка");
 
-        chrome.findElement(By.xpath("//*[@onclick='addElement()']")).click();
-        elements = chrome.findElements(By.xpath("//*[@onclick='deleteElement()']"));
+        driver.findElement(By.xpath("//*[@onclick='addElement()']")).click();
+        elements = driver.findElements(By.xpath("//*[@onclick='deleteElement()']"));
         assertEquals(elements.size(), 2, "должна быть доступна 2 кнопки");
 
         //проверим удалеие 2й кнопки
         elements.get(1).click();
         //повторно ищем и проверяем что осталось 1 кнопка
-        elements = chrome.findElements(By.xpath("//*[@onclick='deleteElement()']"));
+        elements = driver.findElements(By.xpath("//*[@onclick='deleteElement()']"));
         assertEquals(elements.size(), 1, "должна быть доступна только одна кнопка");
 
         /*
@@ -69,9 +70,9 @@ public class AddRemoveElements {
                 break;
             }
         }
-        elements = chrome.findElements(By.xpath("//*[@onclick='deleteElement()']"));
+        elements = driver.findElements(By.xpath("//*[@onclick='deleteElement()']"));
         assertTrue(elements.size() > 0, "все ок");
 
-        chrome.quit();
+        driver.quit();
     }
 }
