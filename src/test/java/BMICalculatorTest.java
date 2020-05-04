@@ -41,7 +41,7 @@ public class BMICalculatorTest {
 
     @Test(description = "Check Underweight Category")
     public void categoryTest3() {
-        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
         WebDriver browser = new ChromeDriver();
         browser.get("https://healthunify.com/bmicalculator/");
         browser.findElement(By.name("wg")).sendKeys("30");

@@ -13,7 +13,7 @@ import static org.testng.Assert.assertTrue;
 public class AddRemoveElements {
     @Test
     void FindElementsTestExample() {
-        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
         WebDriver chrome = new ChromeDriver();
         chrome.get("http://the-internet.herokuapp.com/add_remove_elements/");
         chrome.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

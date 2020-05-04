@@ -1,0 +1,51 @@
+{
+  "uuid": "4c3fe723-3851-4afe-b03a-2d1766c212ef",
+  "historyId": "44c4388557b93261f67860bac057b341",
+  "fullName": "BMICalculatorTest.categoryTest3",
+  "labels": [
+    {
+      "name": "package",
+      "value": "BMICalculatorTest"
+    },
+    {
+      "name": "testClass",
+      "value": "BMICalculatorTest"
+    },
+    {
+      "name": "testMethod",
+      "value": "categoryTest3"
+    },
+    {
+      "name": "parentSuite",
+      "value": "Surefire suite"
+    },
+    {
+      "name": "suite",
+      "value": "Surefire test"
+    },
+    {
+      "name": "subSuite",
+      "value": "BMICalculatorTest"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-0PK0K6T"
+    },
+    {
+      "name": "thread",
+      "value": "11324@DESKTOP-0PK0K6T.main(1)"
+    }
+  ],
+  "links": [],
+  "name": "Check Underweight Category",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "start": 1588589323895,
+  "stop": 1588589369126,
+  "parameters": []
+}

@@ -1,0 +1,51 @@
+{
+  "uuid": "a58a6491-a6ee-4b48-b24c-6c4b227f80c0",
+  "historyId": "a5ea85b6f6697d56eb870a62d04f2e99",
+  "fullName": "InputTest.InputTest",
+  "labels": [
+    {
+      "name": "package",
+      "value": "InputTest"
+    },
+    {
+      "name": "testClass",
+      "value": "InputTest"
+    },
+    {
+      "name": "testMethod",
+      "value": "InputTest"
+    },
+    {
+      "name": "parentSuite",
+      "value": "Surefire suite"
+    },
+    {
+      "name": "suite",
+      "value": "Surefire test"
+    },
+    {
+      "name": "subSuite",
+      "value": "InputTest"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-0PK0K6T"
+    },
+    {
+      "name": "thread",
+      "value": "6784@DESKTOP-0PK0K6T.main(1)"
+    }
+  ],
+  "links": [],
+  "name": "InputTest",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "start": 1588589322256,
+  "stop": 1588589350314,
+  "parameters": []
+}
